@@ -51,5 +51,8 @@ int main(){
     student s2(nme[1],rll[1],mrk[1]);
     student s3(nme[2],rll[2],mrk[2]);
     cout<<"Student Info:"<<endl;
+    s1.display();
+    s2.display();
+    s3.display();
     
 }
