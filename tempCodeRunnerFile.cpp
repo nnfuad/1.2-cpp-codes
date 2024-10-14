@@ -1,20 +1,34 @@
 #include <iostream>
+#include <cmath>
+#include <string>
+#include <vector>
+#include <map>
 using namespace std;
 
-class base {
-public:
-    virtual int f(int a) = 0;
-};
+class Book {
+private:
+    string title;
+    string author;
+    double price;
 
-class derived : public base {
 public:
-    int f(int a) override { 
-        return a * 10;  // Example implementation
+    Book(string t, string a, double p){
+        title = t;
+        author = a;
+        price = p;
+    }
+
+    void display() const {
+        cout << "Book Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Price: $" << price << endl;
     }
 };
 
 int main() {
-    derived d;
-    cout << d.f(5) << endl;
+    Book myBook("1984", "George Orwell", 10.00);
+
+    myBook.display();
+
     return 0;
 }
