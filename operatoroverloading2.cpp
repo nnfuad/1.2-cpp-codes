@@ -27,6 +27,6 @@ coord coord::operator+(coord const &other){
 int main(){
     coord x1(1,2),x2(2,3);
     x1  = x1+x2;
-    cout<<"(x,y)=("<<x1.xgetter()<<","<<x1.ygetter()<<")"<<endl;;;;;;;;;
+    cout<<"(x,y)=("<<x1.xgetter()<<","<<x1.ygetter()<<")"<<endl;
 
 }
