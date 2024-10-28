@@ -1,23 +1,34 @@
+// C++ Program to Demonstrate
+// Operator Overloading
 #include <iostream>
-#include <cmath>
-#include <string>
-#include <vector>
-#include <map>
 using namespace std;
 
-template <typename T>
+class Complex {
+private:
+    int real, imag;
 
-T add(T a , T b){
-    return a+b;
-}
+public:
+    Complex(int r = 0, int i = 0)
+    {
+        real = r;
+        imag = i;
+    }
 
-int main(){
-    int a=5;
-    double b=4;
-    T c=3;
-    T d=4;
-    cout<<add(4,4.5)<<endl;
-    //cout<<add(a,b)<<endl;
-    cout<<add(c,d)<<endl;
+    // This is automatically called when '+' is used with
+    // between two Complex objects
+    Complex operator+(Complex const& obj)
+    {
+        Complex res;
+        res.real = real + obj.real;
+        res.imag = imag + obj.imag;
+        return res;
+    }
+    void print() { cout << real << " + i" << imag << '\n'; }
+};
 
+int main()
+{
+    Complex c1(10, 5), c2(2, 4);
+    Complex c3 = c1 + c2;
+    c3.print();
 }
