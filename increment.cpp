@@ -7,6 +7,8 @@ int main()
     cin>>x;
     y=x++;
     cout<<"Value of y is: "<<y<<endl<<"value of x is "<<x<<endl;
+    z = ++x;
+    cout<<"Value of z is: "<<z<<"Value of y is: "<<y<<endl<<"value of x is "<<x<<endl;
     (z,y)= x++ + ++x;
     cout<<"Value of z is: "<<z<<endl<<"value of x is "<<x<<endl<<"value of y is "<<y<<endl;
 }
