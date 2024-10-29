@@ -4,6 +4,7 @@ using namespace std;
 class Base {
 public:
     virtual void Hi() = 0;  // Pure virtual function
+    int a;
 };
 
 class Derived : public Base {
@@ -20,6 +21,7 @@ int main() {
 
     Base* basePtr = &derivedObj;  // Base pointer to Derived object
     basePtr->Hi();  // Calls Derived::Hi() via polymorphism
+    //Base b1; not possible because of it being an ab stract class
 
     return 0;
 }
